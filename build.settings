@@ -1,19 +1,17 @@
 settings =
 {
-	--[[
 	orientation = {
 		default = "portrait", 
 		supported = { "portrait", },
-		-- supported = { "landscapeLeft", "landscapeRight" },
-		-- supported = { "landscapeLeft", "landscapeRight", "portrait", "portraitUpsideDown", },
+		--supported = { "landscapeLeft", "landscapeRight", "portrait", "portraitUpsideDown", },
 	},
-	--]]
-
+	
 	iphone =
 	{
 		plist =
 		{
 			-- UIApplicationExitsOnSuspend = true, -- default is false
+			UIStatusBarHidden = true,
 			CFBundleIconFile = "Icon.png",
 			CFBundleIconFiles =
 			{
@@ -23,24 +21,5 @@ settings =
 			},
 
 		},
-	},
-
-	-- INSTRUCTIONS
-	-- 
-	-- NOTE: These are for standard library plugins, not for provider plugins.
-	-- 
-	-- 1. Uncomment this block
-	-- 2. Rename PLUGIN_NAME to the name of your plugin, e.g. "openudid"
-	-- 3. Rename REVERSE_PUBLISHER_URL using the reverse domain name, e.g. "com.mycompany"
-	--[[
-	plugins =
-	{
-		-- key is the name passed to Lua's 'require()'
-		["plugin.PLUGIN_NAME"] =
-		{
-			-- required
-			publisherId = "REVERSE_PUBLISHER_URL",
-		},
-	},
-	--]]
+	}
 }
