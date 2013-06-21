@@ -1,7 +1,6 @@
 --lipo -create libPhone.a libSimulator.a -output libUniversal.a
 local OneLouder = require "plugin.OneLouder"
 
-local widget = require('widget-v1')
 local storyboard = require( "storyboard" )
 
 local function listener( event )

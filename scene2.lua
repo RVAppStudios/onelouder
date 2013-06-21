@@ -4,7 +4,7 @@ local storyboard = require( "storyboard" )
 local OneLouder = require "plugin.OneLouder"
 
 local scene = storyboard.newScene()
-local widget = require('widget-v1')
+local widget = require('widget')
 
 local titleBg = nil
 local titleText = nil
@@ -37,6 +37,7 @@ function scene:createScene( event )
     	width = 70,
     	height = 38,
     	label = "Back",
+    	fontSize = 14,
     	onRelease = onBack
 	}
 	backBtn.x = 40

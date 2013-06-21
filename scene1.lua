@@ -4,7 +4,7 @@ local storyboard = require( "storyboard" )
 local OneLouder = require "plugin.OneLouder"
 
 local scene = storyboard.newScene()
-local widget = require('widget-v1')
+local widget = require('widget')
 
 function scene:createScene( event )
     local screenGroup = self.view
@@ -22,6 +22,7 @@ function scene:createScene( event )
     	width = 107,
     	height = 38,
     	label = "Interstitial",
+    	fontSize = 14,
     	onRelease = onInterstitial
 	}
 	interstitialBtn.x = 160
@@ -39,6 +40,7 @@ function scene:createScene( event )
     	width = 107,
     	height = 38,
     	label = "Banner Ad",
+    	fontSize = 14,
     	onRelease = onBanner
 	}
 	bannerBtn.x = 160
@@ -58,6 +60,7 @@ function scene:createScene( event )
     	width = 107,
     	height = 38,
     	label = "Hide Banner Ad",
+    	fontSize = 12,
     	onRelease = onHideBanner
 	}
 	hideBannerBtn.x = 160
@@ -70,13 +73,13 @@ function scene:createScene( event )
     	if(squareAdBtn.isActive) then
     		OneLouder.removeBanner()
 			storyboard.gotoScene( "scene2" )  
-			--OneLouder.showSquareAd()
 		end
 	end
 	squareAdBtn = widget.newButton{
     	width = 107,
     	height = 38,
     	label = "Square Ad",
+    	fontSize = 14,
     	onRelease = onSquareAd
 	}
 	squareAdBtn.x = 160

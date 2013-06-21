@@ -10,7 +10,6 @@ settings =
 	{
 		plist =
 		{
-			-- UIApplicationExitsOnSuspend = true, -- default is false
 			UIStatusBarHidden = true,
 			CFBundleIconFile = "Icon.png",
 			CFBundleIconFiles =
@@ -21,5 +20,13 @@ settings =
 			},
 
 		},
-	}
+	},
+	plugins =
+	{
+		["plugin.OneLouder"] =
+		{
+			-- required
+			publisherId = "com.onelouder",
+		},
+	},	
 }
