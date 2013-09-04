@@ -1,7 +1,7 @@
 module(..., package.seeall)
 
 local storyboard = require( "storyboard" )
-local OneLouder = require "plugin.OneLouder"
+local PinsightMedia = require "plugin.PinsightMedia"
 
 local scene = storyboard.newScene()
 local widget = require('widget')
@@ -15,7 +15,7 @@ function scene:createScene( event )
 	local interstitialBtn = nil
 	local onInterstitial = function(event)
     	if(interstitialBtn.isActive) then
-			OneLouder.showInterstitial("scenechange") --launch --scenechange --preroll
+			PinsightMedia.showInterstitial("scenechange") --launch --scenechange --preroll
 		end
 	end
 	interstitialBtn = widget.newButton{
@@ -33,7 +33,7 @@ function scene:createScene( event )
 	local bannerBtn = nil
 	local onBanner = function(event)
     	if(bannerBtn.isActive) then
-			OneLouder.showBanner("global")
+			PinsightMedia.showBanner("global")
 		end
 	end
 	bannerBtn = widget.newButton{
@@ -48,12 +48,12 @@ function scene:createScene( event )
 	bannerBtn.isActive = true
 	screenGroup:insert(bannerBtn)
 	
-	OneLouder.showBanner("global")
+	PinsightMedia.showBanner("global")
 	
 	local hideBannerBtn = nil
 	local onHideBanner = function(event)
   		if(hideBannerBtn.isActive) then
-			OneLouder.hideBanner()
+			PinsightMedia.hideBanner()
 		end
 	end
 	hideBannerBtn = widget.newButton{
@@ -71,7 +71,7 @@ function scene:createScene( event )
 	local squareAdBtn = nil
 	local onSquareAd = function(event)
     	if(squareAdBtn.isActive) then
-    		OneLouder.removeBanner()
+    		PinsightMedia.removeBanner()
 			storyboard.gotoScene( "scene2" )  
 		end
 	end

@@ -23,10 +23,10 @@ settings =
 	},
 	plugins =
 	{
-		["plugin.OneLouder"] =
+		["plugin.PinsightMedia"] =
 		{
 			-- required
-			publisherId = "com.onelouder",
+			publisherId = "com.PinsightMedia",
 		},
 	},	
 }

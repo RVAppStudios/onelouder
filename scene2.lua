@@ -1,7 +1,7 @@
 module(..., package.seeall)
 
 local storyboard = require( "storyboard" )
-local OneLouder = require "plugin.OneLouder"
+local PinsightMedia = require "plugin.PinsightMedia"
 
 local scene = storyboard.newScene()
 local widget = require('widget')
@@ -25,11 +25,11 @@ function scene:createScene( event )
     titleText.y = 25
     screenGroup:insert(titleText)
     
-    OneLouder.showSquareAd("test_square",240)
+    PinsightMedia.showSquareAd("test_square",240)
     
     local onBack = function(event)
     	if(backBtn.isActive) then
-			OneLouder.removeSquareAd()
+			PinsightMedia.removeSquareAd()
 			storyboard.gotoScene( "scene1" )  
 		end
 	end
