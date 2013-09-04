@@ -1,3 +1,3 @@
-onelouder
-=========
-This sample application showcasing the use of OneLouder Android plugin for Corona SDK.
+PinsightMedia 
+=================
+This sample application showcasing the use of PinsightMedia plugin for Corona SDK.
